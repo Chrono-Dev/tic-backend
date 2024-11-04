@@ -3,9 +3,11 @@
 set -o errexit
 
 bundle install
+bundle exec rails assets:precompile
+bundle exec rails assets:clean
 
-# Se você estiver usando um tipo de instância Free, você precisa
-# realizar as migrações de banco de dados no comando de build.
-# Descomente a linha a seguir se necessário:
+# If you're using a Free instance type, you need to
+# perform database migrations in the build command.
+# Uncomment the following line:
 
 # bundle exec rails db:migrate
