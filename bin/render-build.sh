@@ -4,8 +4,8 @@ set -o errexit
 
 bundle install
 
-# If you're using a Free instance type, you need to
-# perform database migrations in the build command.
-# Uncomment the following line:
+# Se você estiver usando um tipo de instância Free, você precisa
+# realizar as migrações de banco de dados no comando de build.
+# Descomente a linha a seguir se necessário:
 
 # bundle exec rails db:migrate
