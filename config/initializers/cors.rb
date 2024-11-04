@@ -17,7 +17,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'http://localhost:5500' # Substitua pela URL do seu frontend se necessário
+      origins 'https://chrono-dev.github.io/tic-frontend/' # Substitua pela URL do seu frontend se necessário
       resource '*', headers: :any, methods: [:get, :post]
     end
   end
