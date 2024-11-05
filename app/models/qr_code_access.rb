@@ -1,3 +1,4 @@
-class QRCodeAccess < ApplicationRecord
-    # Outras configurações do modelo
-end
+# app/models/qr_code_access.rb
+class QrCodeAccess
+    # código da classe
+  end

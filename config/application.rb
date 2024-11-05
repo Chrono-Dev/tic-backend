@@ -35,5 +35,7 @@ module TicBackend
     config.api_only = true
 
     config.autoloader = :classic
+    config.eager_load = true
+    config.eager_load_paths += %W(#{config.root}/app/lib)
   end
 end
