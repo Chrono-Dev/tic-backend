@@ -1,7 +1,7 @@
 class QrCodeAccessesController < ApplicationController
   # Endpoint para registrar um novo acesso ao QRCode
   def create
-    qr_code_access = QRCodeAccess.create(
+    qr_code_access = QrCodeAccess.create( # Corrigido para QrCodeAccess
       user_ip: params[:user_ip],
       location: params[:location]
     )
@@ -14,7 +14,7 @@ class QrCodeAccessesController < ApplicationController
   end
 
   def index
-    qr_code_accesses = QRCodeAccess.all
+    qr_code_accesses = QrCodeAccess.all # Corrigido para QrCodeAccess
     render json: qr_code_accesses
   end
 end
