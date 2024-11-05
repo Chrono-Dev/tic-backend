@@ -10,7 +10,16 @@ Bundler.require(*Rails.groups)
 
 module TicBackend
   class Application < Rails::Application
-
+    
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'https://chrono-dev.github.io'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :delete, :options, :head],
+          credentials: true
+      end
+    end
 
 
     # Initialize configuration defaults for originally generated Rails version.
@@ -37,5 +46,7 @@ module TicBackend
     config.autoloader = :classic
     config.eager_load = true
     config.eager_load_paths += %W(#{config.root}/app/lib)
+
+    
   end
 end
