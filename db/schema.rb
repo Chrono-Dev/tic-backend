@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_05_024638) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_05_232341) do
   create_table "qr_code_accesses", force: :cascade do |t|
     t.string "user_ip"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "proAI"
   end
 end

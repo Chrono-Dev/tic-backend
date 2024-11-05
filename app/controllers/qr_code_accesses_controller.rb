@@ -3,7 +3,8 @@ class QrCodeAccessesController < ApplicationController
   def create
     qr_code_access = QrCodeAccess.create( # Corrigido para QrCodeAccess
       user_ip: params[:user_ip],
-      location: params[:location]
+      location: params[:location],
+      proAI: params[:proAI]
     )
 
     if qr_code_access.persisted?
