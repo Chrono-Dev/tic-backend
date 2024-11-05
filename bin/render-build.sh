@@ -2,10 +2,11 @@
 # exit on error
 set -o errexit
 
+# Instala as dependências
 bundle install
-rails db:migrate
-# If you're using a Free instance type, you need to
-# perform database migrations in the build command.
-# Uncomment the following line:
 
-# bundle exec rails db:migrate
+# Realiza as migrações do banco de dados
+rails db:migrate
+
+# Inicia o servidor
+bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
