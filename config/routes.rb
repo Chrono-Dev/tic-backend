@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   Rails.application.routes.draw do
     resources :qr_code_accesses, only: [:create, :index]
+    root 'qr_code_accesses#index' # Se essa for uma rota válida da sua API
   end
 end
