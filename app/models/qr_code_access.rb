@@ -1,4 +1,3 @@
-# app/models/qr_code_access.rb
-class QrCodeAccess
-    # código da classe
+class QrCodeAccess < ApplicationRecord
+    # Defina atributos e métodos aqui
   end
