@@ -12,7 +12,7 @@ class QrCodeAccessesController < ApplicationController
       render json: { error: "Falha ao registrar o acesso." }, status: :unprocessable_entity
     end
   end
-
+#teste
   def index
     qr_code_accesses = QrCodeAccess.all # Corrigido para QrCodeAccess
     render json: qr_code_accesses
