@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :qr_code_accesses, only: [:create, :index]
+  resources :qr_code_accesses, only: [:create, :index] do
+    member do
+      post :add_comment
+    end
+  end
   root 'qr_code_accesses#index' # Se essa for uma rota válida da sua API
 
   match "*path", to: "application#preflight", via: :options
