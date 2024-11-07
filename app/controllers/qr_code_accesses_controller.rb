@@ -9,7 +9,7 @@ class QrCodeAccessesController < ApplicationController
     )
 
     if qr_code_access.persisted?
-      render json: { message: "Acesso registrado com sucesso!" }, status: :created
+      render json: { message: "Acesso registrado com sucesso!", id: qr_code_access.id}, status: :created
     else
       render json: { error: "Falha ao registrar o acesso." }, status: :unprocessable_entity
     end
